@@ -1,6 +1,22 @@
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:500,600,700|Roboto:400,400i,500,700&amp;display=swap");
 
+/* Preloader Style */
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #ffffff; /* Change background if needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader-gif {
+    width: 80px;  /* GIF size */
+}
+
 html {
   font-size: 16px;
 }
