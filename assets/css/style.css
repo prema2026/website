@@ -1187,10 +1187,11 @@ img {
     border: 0;
     outline: none;
     position: absolute;
-    left: 10px;
-    top: 90px;
+    right: 10px;
+    top: 10px;
     z-index: 20;
   }
+
   .site-header #navbar .close-navbar .ti-close {
     position: relative;
     top: 1px;
@@ -1199,7 +1200,7 @@ img {
     border-bottom: 1px solid #f2f2f2;
   }
   .site-header #navbar > ul > li > a {
-    padding: 10px 15px 10px 35px;
+    padding: 10px 15px 10px 15px;
   }
   .site-header .slideInn {
     right: 0 !important;
