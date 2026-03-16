@@ -397,7 +397,12 @@ img {
   position: relative;
   text-align: center;
 }
-
+/* 991px and below */
+@media (max-width: 991px) {
+  .page-title {
+    background-image: url("../images/page-title-mobile.jpg");
+  }
+}
 @media (max-width: 991px) {
   .page-title {
 	width: 100%;
@@ -6623,4 +6628,3 @@ html, body {
   max-width: 100% !important;
 }
 
-/*# sourceMappingURL=style.css.map */
