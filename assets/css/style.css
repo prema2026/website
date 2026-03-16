@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css?family=Poppins:500,600,700|Roboto:400,400i,500,700&amp;display=swap");
 
 /* Preloader Style */
@@ -19,6 +18,8 @@
 
 html {
   font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -29,6 +30,7 @@ body {
   color: #777777;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 @media (max-width: 767px) {
@@ -78,7 +80,9 @@ img {
 
 .page-wrapper {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 .wow {
@@ -1178,7 +1182,7 @@ img {
     border: 0;
     outline: none;
     position: absolute;
-    left: -41px;
+    left: 10px;
     top: 90px;
     z-index: 20;
   }
@@ -1671,28 +1675,39 @@ img {
   height: auto;
   position: relative;
   overflow: hidden;
+  max-width: 100%;
 }
 
 .hero-slider .swiper-slide {
   overflow: hidden;
   color: #fff;
+  width: 100% !important;
 }
 
 .hero-slider .swiper-container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
+  width: 100% !important;
+  height: auto !important;
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
+/* Image-based slide — full width, height auto */
+.hero-slider .slide-inner {
+  width: 100%;
+  height: auto;
+  display: block;
+  line-height: 0;
+}
 
-.hero-slider .slide-inner{
-width:100%;
-height:100%;
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
+.hero-slider .slide-inner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  object-fit: unset;
 }
 
 .hero-slider .swiper-button-prev,
@@ -1768,20 +1783,21 @@ background-repeat:no-repeat;
 
 
 .hero-style-2 {
-  min-height: 75vh;
   height: auto;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
 }
 
 @media (max-width: 991px) {
   .hero-style-2{
-    min-height: 45vh;
     height: auto;
   }
 }
 
 @media (max-width: 767px) {
   .hero-style-2 {
-    min-height: 45vh;
     height: auto;
   }
 }
@@ -6544,6 +6560,67 @@ background-repeat:no-repeat;
 
 .shop-single-section .slider-nav .slick-slide:focus {
   outline: none;
+}
+
+/* ============================================
+   HERO SLIDER — FULL WIDTH, HEIGHT AUTO (image-based)
+   ============================================ */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.page-wrapper {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.hero-slider.hero-style-2 {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  min-height: unset !important;
+  overflow: hidden !important;
+}
+
+.hero-slider .swiper-container,
+.hero-style-2 .swiper-container {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: unset !important;
+  left: auto !important;
+  top: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.hero-slider .swiper-wrapper {
+  width: 100% !important;
+  height: auto !important;
+  align-items: stretch;
+}
+
+.hero-slider .swiper-slide {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* The actual image fills full width, height is natural */
+.hero-slider .slide-inner {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  line-height: 0 !important;
+}
+
+.hero-slider .slide-inner img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  max-width: 100% !important;
 }
 
 /*# sourceMappingURL=style.css.map */
